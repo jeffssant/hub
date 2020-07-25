@@ -1,10 +1,3 @@
-/**
-* Template Name: Gp - v2.1.0
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -661,8 +654,8 @@ section {
 
 .services .icon-box .icon {
   margin: 0 auto;
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   background: #f3b300;
   border-radius: 4px;
   display: flex;
@@ -734,7 +727,7 @@ section {
   border-radius: 4px;
   transition: 0.5s;
   margin-top: 10px;
-  border: 2px solid #fff;
+  border: 2px solid #f3b300;
   color: #fff;
 }
 
