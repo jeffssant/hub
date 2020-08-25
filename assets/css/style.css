@@ -1697,3 +1697,70 @@ margin-left: 12px;
   color: black;
   cursor: not-allowed;
 }
+
+.bradcam_area {
+  padding: 170px;
+  background-size: cover;
+  background-position: center center;
+  padding: 171px 0px;
+  background-repeat: no-repeat;
+}
+
+
+
+.bradcam_area h3 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 0;
+
+  text-transform: capitalize;
+}
+
+.recent_event_area .single_event {
+  border: 1px solid #e0e0e0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.recent_event_area .single_event .date {
+  background: #f3b300;
+  padding: 45px 70px;
+}
+
+.recent_event_area .single_event .date span {
+  font-size: 58px;
+  font-family: "Abril Fatface", cursive;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.recent_event_area .single_event .date p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1;
+}
+.course_list{
+  padding: 0;
+}
+.event_info{
+  padding: 0 15px;
+}
+#hero.bradcam_area {
+  height: 200px;
+}
+
+#hero.bradcam_area .container{
+  padding-top: 0;
+}
+
+.title-a{
+  color: #f3b300;
+}

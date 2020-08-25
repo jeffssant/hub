@@ -1,0 +1,299 @@
+#quiz-container {
+    padding: 100px 0px 30px 0px;
+    background: #3e9eb1;
+}
+
+#wpProQuiz_2 {
+    height: auto;
+    overflow-y: auto;
+}
+
+.wpProQuiz_question_text p {
+    padding: 5px;
+    text-align: center;
+    font-family: GraphikMedium !important;
+    position: relative;
+}
+
+.wpProQuiz_question_text p::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    bottom: 5%;
+    height: 1px;
+    border-top: solid #3e9eb1 3px;
+}
+
+.wpProQuiz_question {
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 40px !important;
+    position: relative
+}
+
+#load-bar-quiz {
+    background: linear-gradient(to left, #feca0c, #ffffff),
+    #feca0c !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 8px;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s ease-in-out
+}
+
+.wpProQuiz_questionList {
+    background: #fff !important;
+    border: transparent !important
+}
+
+.wpProQuiz_question_text,
+ul.wpProQuiz_questionList {
+    width: 80%;
+    float: none;
+    display: block;
+    position: relative;
+    margin: 0 auto !important
+}
+
+ul.wpProQuiz_questionList {
+    padding-left: 15px !important
+}
+
+input[name=next].wpProQuiz_button,
+input[name=next].wpProQuiz_button:hover {
+    padding: 10px 70px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent !important;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem !important;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-color: #184478 !important;
+}
+
+.radioBoxCheck:before,
+.radioBoxUncheck:before {
+    font-family: FontAwesome;
+    font-size: 17px;
+    color: #feca0c;
+    position: relative
+}
+
+#curso-conteudo .container.quiz-container::after {
+    border: none
+}
+
+input[type=radio].wpProQuiz_questionInput {
+    display: none !important
+}
+
+.wpProQuiz_questionListItem label {
+    cursor: pointer
+}
+
+.radioBoxUncheck:before {
+    content: "\f10c"
+}
+
+.radioBoxCheck:before {
+    content: "\f111"
+}
+p#pagecounter {
+    color: #fff !important;
+}
+
+p#pagecounter span {
+    display: inline !important
+}
+
+p#pagecounter {
+    text-align: right;
+    margin: 0 !important;
+    padding: 0 !important
+}
+
+#result-section .container {
+    background: #fff;
+    padding: 30px
+}
+
+#result-section p,
+#result-section span {
+    display: block;
+    text-align: center
+}
+
+#result-section span {
+    background: linear-gradient(to right, #0576d7, #354fc7);
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: GraphikSemibold !important
+}
+
+p#conheca-cursos {
+    color: #003366;
+    position: relative
+}
+
+p#conheca-cursos i {
+    font-size: 20px
+}
+
+#cursos-lista .row {
+    background-color: white;
+    margin: 0;
+    padding: 0 25px;
+}
+
+#cursos-lista .column-cursos h3 {
+    line-height: 30px;
+    font-family: GraphikRegular
+}
+
+#cursos-lista .column-cursos h3 strong {
+    color: #0099ff;
+    font-family: GraphikSemibold !important
+}
+
+#cursos-lista .column-cursos p {
+    font-family: GraphikRegular !important
+}
+
+#cursos-lista .column-cursos ul {
+    padding: 0;
+    margin: 25px 0 0
+}
+
+#cursos-lista .column-cursos ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-family: GraphikRegular;
+    text-transform: capitalize !important
+}
+
+#enviar-curso,
+#nota-position label,
+#nota-position small,
+.invalid-msg {
+    text-transform: uppercase
+}
+
+#cursos-lista .column-cursos ul li:before {
+    content: "\f046";
+    font-family: FontAwesome;
+    color: #0a79d8
+}
+
+#cursos-lista .container:after,
+#result-section .container:after,
+#share-results .container:after {
+    border: none !important
+}
+
+#share-results {
+    margin-top: 40px
+}
+
+#share-results p {
+    text-align: center;
+    color: #dd005e;
+    font-family: GraphikMedium
+}
+
+#share-results .share-icon {
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    padding: 17px
+}
+
+#share-icon-position {
+    margin: 0 auto;
+    padding: 0;
+    flex-flow: wrap;
+    justify-content: space-around;
+    display: flex;
+    width: 150px
+}
+
+#share-icon-position li {
+    list-style: none;
+    color: #fff;
+    position: relative;
+    cursor: pointer
+}
+
+#share-icon-position li i {
+    position: absolute;
+    top: 30%;
+    left: 32%
+}
+
+#share-results .share-icon.twitter {
+    background: #55acee
+}
+
+#share-results .share-icon.facebook {
+    background: #3b5998
+}
+
+#share-results .share-icon.google {
+    background: #dc4e41
+}
+
+.quiz-content {
+    margin-bottom: 0 !important
+}
+
+#enviar-curso {
+    padding: 10px 70px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+    background-color: #184478 !important;
+    width: 25%;
+}
+
+#share-results {
+    display: none;
+}
+
+#cursos-lista .row {
+    padding-bottom: 30px;
+}
