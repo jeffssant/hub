@@ -11,6 +11,7 @@
 			</div>
 			<div class="copyright">
 				&copy; Copyright <strong><span>Hub Vocacional</span></strong>. Todos direitos reservados.
+				<div class="jeff"> Desenvvolvido por <a href="https://github.com/jeffssant/" target="_blank">Jefferson Sant' Ana</a>
 			</div>
 
 		</div>

@@ -734,11 +734,12 @@ section {
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 5px 28px;
+  padding: 5px 28px !important;
   border-radius: 4px;
-  transition: 0.5s;
-  border: 2px solid #f3b300;
+  transition: 0.5s !important;
+  border: 2px solid #f3b300 !important;
   color: #fff;
+
 }
 
 .cta .cta-btn:hover, .insc-btn:hover {
@@ -1198,11 +1199,11 @@ section {
 }
 
 .contact .php-email-form .error-message {
-  display: none;
+
   color: #fff;
-  background: #ed3c0d;
+  background: #680101b3;
   text-align: left;
-  padding: 15px;
+  padding: 9px;
   font-weight: 600;
 }
 
@@ -1430,7 +1431,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: black;
-  padding: 0 0 30px 0;
+  padding: 0 0 20px 0;
   color: #fff;
   font-size: 14px;
 }
@@ -1729,11 +1730,11 @@ margin-left: 12px;
 
 .recent_event_area .single_event .date {
   background: #f3b300;
-  padding: 45px 70px;
+  padding: 20px;
 }
 
 .recent_event_area .single_event .date span {
-  font-size: 58px;
+  font-size: 24px;
   font-family: "Abril Fatface", cursive;
   color: #fff;
   line-height: 1;
@@ -1746,13 +1747,14 @@ margin-left: 12px;
   color: #fff;
   margin-bottom: 0;
   font-weight: 400;
-  line-height: 1;
+  line-height: 21px;
 }
 .course_list{
   padding: 0;
 }
 .event_info{
-  padding: 0 15px;
+  padding: 0 10px;
+  font-size: 14px;
 }
 #hero.bradcam_area {
   height: 200px;
@@ -1796,4 +1798,194 @@ margin-left: 12px;
     cursor: pointer;
   }
 
-  
+  .ur-frontend-form {
+    margin-bottom: 0 !important;
+    border:none!important;
+    padding: 0 !important;
+}
+
+.ur-frontend-form .ur-form-row .ur-form-grid .__PrivateStripeElement, .ur-frontend-form .ur-form-row .ur-form-grid input[type="date"], .ur-frontend-form .ur-form-row .ur-form-grid input[type="email"], .ur-frontend-form .ur-form-row .ur-form-grid input[type="number"], .ur-frontend-form .ur-form-row .ur-form-grid input[type="password"], .ur-frontend-form .ur-form-row .ur-form-grid input[type="phone"], .ur-frontend-form .ur-form-row .ur-form-grid input[type="text"], .ur-frontend-form .ur-form-row .ur-form-grid input[type="timepicker"], .ur-frontend-form .ur-form-row .ur-form-grid input[type="url"], .ur-frontend-form .ur-form-row .ur-form-grid select, .ur-frontend-form .ur-form-row .ur-form-grid textarea {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.ur-frontend-form .ur-form-row .ur-form-grid .ur-field-item{
+  margin-bottom: 4px;
+}
+
+.ur-frontend-form .ur-form-row .ur-form-grid .hide_show_password .password-input-group{
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+  color: #495057 !important; 
+}
+
+input:-moz-placeholder {
+  color: #495057 !important; 
+}
+
+textarea:-moz-placeholder {
+  color: #495057 !important; 
+}
+
+::-webkit-input-placeholder {
+  color: #495057 !important; 
+}
+
+::-moz-placeholder {
+  color: #495057 !important; 
+}
+
+.ur-frontend-form .ur-form-row .ur-form-grid select{
+  color:#495057bd;
+}
+
+.ur-frontend-form .ur-button-container, .ur-frontend-form .ur-submit-button{
+  margin: 0;
+  padding: 0;
+}
+
+.ur-form-grid.ur-grid-1{
+  width: 100% !important;
+}
+
+.ur-frontend-form .ur-form-row .ur-form-grid{
+  padding: 0 5px;
+}
+
+.teste-vocacional .cta-btn{
+  width: 100% !important;
+}
+.bd-example-modal-lg-cadastro ul{
+  display: inline-flex;
+  padding-left: 10px;
+}
+.bd-example-modal-lg-cadastro .insc-btn{
+  background-color: white;
+}
+.bd-example-modal-lg-cadastro .insc-btn:hover{
+  background-color:#f3b300;
+}
+
+.bd-example-modal-lg-cadastro ul li{
+  padding: 0 5px;
+}
+
+.ur-frontend-form .ur-form-row .ur-form-grid label, .ur-frontend-form .ur-form-row .ur-form-grid legend{
+  margin-top: 2px;
+}
+
+.ur-frontend-form button, .ur-frontend-form button[type="submit"], .ur-frontend-form input[type="submit"]{
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 5px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: 2px solid #f3b300;
+ 
+  margin-top:12px;
+}
+
+.user-registration-error{
+  margin-top: 2px;
+position: absolute;
+right: 8%;
+margin: 0;
+padding: 0;
+}
+
+#user_pass-error{
+  margin-top: -9%
+}
+.user-registration-error{
+  border: none;
+  background-color: unset;
+  color:#495057bd;
+}
+
+.user-registration-error::before, .user-registration-info::before, .user-registration-message::before{
+  margin-right: 2px;
+}
+
+#cidade:disabled, #cta-btn:disabled{
+  cursor: not-allowed;
+ 
+  background-color: #8282829e;
+  border: none;
+}
+
+.aviso{
+  padding: 7px;
+  text-align: center;
+  background-color: #00000063;
+  color: white;
+}
+
+.error-message{
+  background-color: #ff000047;
+}
+.cadastrado{
+  background-color: #0080004a;
+}
+
+.input-erro{
+  border-color: #ff0000bd;
+}
+
+.inscricao ul {
+  list-style: none;
+}
+
+.recent_event_area .single_event  .date.preto{
+  background-color: #4a4a4a;
+}
+
+#result-section {
+  padding-bottom: 0;
+}
+
+#cursos-lista {
+  padding-top: 0;
+}
+
+#cursos-lista .column-cursos ul li {
+  float: left;
+  width: 290px;
+}
+
+.wpProQuiz_header{
+  display: none;
+}
+
+.jeff{
+  font-size: 10px;
+}
+
+.icon-r{
+  font-size: 35px;
+  line-height: 35px;
+  color: #151515;
+}
+
+.title-r a{
+  font-size: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #151515;
+  padding-left: 2px;
+}

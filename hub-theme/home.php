@@ -9,8 +9,6 @@ $fields = get_fields($id);
 get_header(); 
 
 ?>
-
-
 <section id="hero" class="d-flex align-items-center justify-content-center">
 	<div class="container" data-aos="fade-up">
 
@@ -27,31 +25,31 @@ get_header();
 			$classe = "active";
 			foreach($fields ["cursos"] as $curso){ 
 			?>
-				<div class=" col-md-4 mt-5 mt-md-0 mt-lg-0 ">
-					<div class="icon-box">
-						<i class="<?=$curso['icone']?>"></i>
-						<h3><a href=""><?=$curso['titulo']?></a></h3>
-						<p class="mb-3">R$<?=$curso['valor']?> mês</p>
-						<a href="" class="get-started-btn scrollto">Inscreva-se</a>
-						<a href="#tab-<?=$count?>" class="get-started-btn scrollto tab-<?=$count?>" data-toggle="tab">
-							Saiba mais
-						</a>
-					</div>
+			<div class=" col-md-4 mt-5 mt-md-0 mt-lg-0 ">
+				<div class="icon-box">
+					<i class="<?=$curso['icone']?>"></i>
+					<h3><a href=""><?=$curso['titulo']?></a></h3>
+					<p class="mb-3">R$<?=$curso['valor']?> mês</p>
+					<a href="" class="get-started-btn scrollto curso-<?=$count?>" data-toggle="modal"
+						data-target=".bd-example-modal-lg-cadastro">Inscreva-se</a>
+					<a href="#tab-<?=$count?>" class="get-started-btn scrollto tab-<?=$count?>" data-toggle="tab">
+						Saiba mais
+					</a>
 				</div>
-				<?php 
+			</div>
+			<?php 
 				$count++;
-			} ?>			
+			} ?>
 		</div>
 	</div>
 </section><!-- End Hero -->
 
 
-
-<div class="modal fade bd-example-modal-lg-login" tabindex="-1" role="dialog"
-	aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg-login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+	aria-hidden="true">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
-		<?php echo do_shortcode( '[wp_login_form redirect="http://localhost/hubtema/area-do-aluno" label_username="Usuário ou E-mail"]' ); ?>
+			<?php echo do_shortcode( '[wp_login_form redirect="'.get_home_url(  ).'/area-do-aluno" label_username="Usuário ou E-mail"]' ); ?>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 			</div>
@@ -103,7 +101,7 @@ get_header();
 					<?= $fields['texto_teste']?>
 				</div>
 				<div class="col-md-5 mx-auto px-md-4 mt-md-0 mt-lg-0 mt-4">
-					<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+					<form action="" method="post" role="form" class="php-email-form teste-vocacional">
 						<div class="form-row">
 							<div class="col-12 form-group">
 								<input type="text" name="name-teste" class="form-control" id="name-teste"
@@ -116,73 +114,41 @@ get_header();
 								<div class="validate"></div>
 							</div>
 							<div class="col-12 form-group">
-								<input type="tel" class="form-control" name="tel-teste" id="tel" placeholder="Telefone"
-									data-rule="email" data-msg="Please enter a valid email" />
+								<input type="tel" class="form-control" name="tel-teste" id="tel-teste"
+									placeholder="Telefone" data-rule="telefone" data-msg="Please enter a valid tel" />
 								<div class="validate"></div>
 							</div>
 							<div class="col-12 form-group">
 
-								<select class="form-control" name="estado" id="estado" placeholder="Estado"
-									data-rule="estado" data-msg="Please enter a valid email">
-									<option>Selecione o estado</option>
-									<option value="AC">Acre</option>
-									<option value="AL">Alagoas</option>
-									<option value="AP">Amapá</option>
-									<option value="AM">Amazonas</option>
-									<option value="BA">Bahia</option>
-									<option value="CE">Ceará</option>
-									<option value="DF">Distrito Federal</option>
-									<option value="ES">Espírito Santo</option>
-									<option value="GO">Goiás</option>
-									<option value="MA">Maranhão</option>
-									<option value="MT">Mato Grosso</option>
-									<option value="MS">Mato Grosso do Sul</option>
-									<option value="MG">Minas Gerais</option>
-									<option value="PA">Pará</option>
-									<option value="PB">Paraíba</option>
-									<option value="PR">Paraná</option>
-									<option value="PE">Pernambuco</option>
-									<option value="PI">Piauí</option>
-									<option value="RJ">Rio de Janeiro</option>
-									<option value="RN">Rio Grande do Norte</option>
-									<option value="RS">Rio Grande do Sul</option>
-									<option value="RO">Rondônia</option>
-									<option value="RR">Roraima</option>
-									<option value="SC">Santa Catarina</option>
-									<option value="SP">São Paulo</option>
-									<option value="SE">Sergipe</option>
-									<option value="TO">Tocantins</option>
+
+								<select class="form-control" name="estado" id="estado-teste" placeholder="Estado"
+									data-rule="estado" data-msg="Por favor selecione o estado">
 								</select>
 							</div>
 							<div class="col-12 form-group">
-								<input type="text" class="form-control" name="cidade" id="cidade" placeholder="Cidade"
-									data-rule="cidade" data-msg="Please enter a valid email" disabled />
-								<div class="validate"></div>
+								<select class="form-control" name="cidade" id="cidade-teste" placeholder="Cidade"
+									data-rule="cidade" data-msg="Por favor selecione a cidade">
+								</select>
 							</div>
 							<div class="col-12 form-group">
-								<input type="text" class="form-control" name="password" id="password"
+								<input type="password" class="form-control" name="password" id="password-teste"
 									placeholder="Senha" data-rule="minlen:4"
-									data-msg="Please enter at least 8 chars of subject" />
+									data-msg="Please enter at least 4 chars of subject" />
 								<div class="validate"></div>
 							</div>
 
 							<div class="col-md-12 form-group text-center">
-								<a class="cta-btn w-100" href="#">Fazer o teste</a>
+								<button id="cta-btn" type="submit" class="btn button cta-btn w-100">
+									Fazer o teste
+								</button>
 							</div>
 						</div>
+					</form>
+					<div class="mb-3 aviso" style="display: none;">
+						<div class="loading">Carregando</div>
+					</div>
 				</div>
-
-
-				<div class="mb-3" style="display: none;">
-					<div class="loading">Loading</div>
-					<div class="error-message"></div>
-					<div class="sent-message">Your message has been sent. Thank you!</div>
-				</div>
-
-				</form>
-
 			</div>
-
 		</div>
 	</section><!-- End Cta Section -->
 	<?php if($fields ["cursos"]){?>
@@ -200,13 +166,13 @@ get_header();
 				$classe = "active";
 				foreach($fields ["cursos"] as $curso){ 
 					if ($count > 0 ){$classe = "";}	?>
-					<li class="nav-item col-4">
-						<a class="nav-link tab-<?=$count?> <?=$classe?>" data-toggle="tab" href="#tab-<?=$count?>">
-							<i class="<?=$curso['icone']?>"></i>
-							<h4 class="d-none d-lg-block"><?=$curso['titulo']?></h4>
-						</a>
-					</li>
-					<?php $count++;
+				<li class="nav-item col-4">
+					<a class="nav-link tab-<?=$count?> <?=$classe?>" data-toggle="tab" href="#tab-<?=$count?>">
+						<i class="<?=$curso['icone']?>"></i>
+						<h4 class="d-none d-lg-block"><?=$curso['titulo']?></h4>
+					</a>
+				</li>
+				<?php $count++;
 				} ?>
 			</ul>
 
@@ -216,14 +182,15 @@ get_header();
 				$classe = "active";
 				foreach($fields ["cursos"] as $curso){ 
 					if ($count > 0 ){$classe = "";}	?>
-					<div class="tab-pane <?=$classe?>" id="tab-<?=$count?>">
-						<div class="row">
-							<div class="col-lg-11  mt-3">
+				<div class="tab-pane <?=$classe?>" id="tab-<?=$count?>">
+					<div class="row">
+						<div class="col-lg-11  mt-3">
 							<?=$curso['texto']?>
-							<a class="insc-btn curso-<?=$count?>" href="#">Inscreva-se</a>
-							</div>
+							<a class="insc-btn curso-<?=$count?>" href="#" data-toggle="modal"
+								data-target=".bd-example-modal-lg-cadastro">Inscreva-se</a>
 						</div>
 					</div>
+				</div>
 				<?php $count++;
 				} ?>
 			</div>
@@ -237,17 +204,16 @@ get_header();
 		<div class="container" data-aos="zoom-in">
 			<div class="owl-carousel testimonials-carousel">
 				<?php foreach($fields["depoimentos"] as $depoimento){?>
-					<div class="testimonial-item">
-						<img src="<?=$depoimento['foto']?>"
-							class="testimonial-img" alt="">
-						<h3><?=$depoimento['nome']?></h3>
-						<h4><?=$depoimento['cargo']?></h4>
-						<p>
-							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							<?=$depoimento['depoimento']?>
-							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-						</p>
-					</div>
+				<div class="testimonial-item">
+					<img src="<?=$depoimento['foto']?>" class="testimonial-img" alt="">
+					<h3><?=$depoimento['nome']?></h3>
+					<h4><?=$depoimento['cargo']?></h4>
+					<p>
+						<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+						<?=$depoimento['depoimento']?>
+						<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+					</p>
+				</div>
 				<?php } ?>
 			</div>
 		</div>
@@ -276,35 +242,25 @@ get_header();
 				</div>
 				<div class="col-lg-8 mt-5 mt-lg-0">
 
-					<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+					<form action="forms/contact.php" method="post" role="form" class="php-email-form" id="form-conta">
 						<div class="form-row">
 							<div class="col-md-6 form-group">
-								<input type="text" name="name" class="form-control" id="name" placeholder="Nome"
-									data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-								<div class="validate"></div>
+								<input type="text" class="form-control" id="name-contato" placeholder="Nome" />
 							</div>
 							<div class="col-md-6 form-group">
-								<input type="email" class="form-control" name="email" id="email" placeholder="Email"
-									data-rule="email" data-msg="Please enter a valid email" />
-								<div class="validate"></div>
+								<input type="email" class="form-control" id="email-contato" placeholder="Email"  />
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto"
-								data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-							<div class="validate"></div>
+							<input type="text" class="form-control" id="subject" placeholder="Assunto"/>
 						</div>
 						<div class="form-group">
-							<textarea class="form-control" name="message" rows="5" data-rule="required"
-								data-msg="Please write something for us" placeholder="Mensagem"></textarea>
-							<div class="validate"></div>
+							<textarea class="form-control mensagem"  rows="5"  placeholder="Mensagem"></textarea>
 						</div>
-						<div class="mb-3">
-							<div class="loading">Loading</div>
-							<div class="error-message"></div>
-							<div class="sent-message">Your message has been sent. Thank you!</div>
+						<div class="mb-3 aviso-contato" style="display: none;">
+							<div class="loading">Carregando</div>
 						</div>
-						<div class="text-right"><button type="submit">Enviar</button></div>
+						<div class="text-right"><button type="submit" id="contact-button">Enviar</button></div>
 					</form>
 
 				</div>
@@ -347,5 +303,89 @@ foreach($fields['caixas_sonho'] as $caixa){
 $counter++;
 }
 ?>
+<div class="modal fade bd-example-modal-lg-cadastro" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+right: 6%;">
+				<span aria-hidden="true">×</span>
+			</button>
+			<div class="section-title">
+				<h2>Seja</h2>
+				<p style="font-size:22px; margin-bottom:20px">Nosso aluno </p>
+			</div>
+
+
+			<div class="modal-footer">
+				<form action="" method="post" role="form" class="php-email-form inscricao">
+					<div class="form-row">
+						<div class="col-12 form-group">
+							<input type="text" class="form-control" id="name" placeholder="Nome" data-rule="minlen:4"
+								data-msg="Please enter at least 4 chars" />
+							<div class="validate"></div>
+						</div>
+						<div class="col-12 form-group">
+							<input type="email" class="form-control" id="email" placeholder="Email" data-rule="email"
+								data-msg="Please enter a valid email" />
+							<div class="validate"></div>
+						</div>
+						<div class="col-12 form-group">
+							<input type="tel" class="form-control" id="tel" placeholder="Telefone" data-rule="telefone"
+								data-msg="Please enter a valid tel" />
+							<div class="validate"></div>
+						</div>
+						<div class="col-12 form-group">
+
+
+							<select class="form-control" id="estado" placeholder="Estado" data-rule="estado"
+								data-msg="Por favor selecione o estado">
+							</select>
+						</div>
+						<div class="col-12 form-group">
+							<select class="form-control" id="cidade" placeholder="Cidade" data-rule="cidade"
+								data-msg="Por favor selecione a cidade">
+							</select>
+						</div>
+						<div class="col-12 form-group">
+							<input type="password" class="form-control" id="password" placeholder="Senha"
+								data-rule="minlen:4" data-msg="Please enter at least 4 chars of subject" />
+							<div class="validate"></div>
+						</div>
+
+
+					</div>
+					<div data-field-id="Curso" class="ur-field-item field-radio ">
+						<div class="form-row validate-required" id="Curso_field" data-priority=""><label
+								for="Fundamental" class="ur-label">Curso <abbr class="required"
+									title="required">*</abbr></label>
+							<ul>
+								<li class="ur-radio-list"><input data-rules="" data-id="Curso" type="radio"
+										class="input-radio ur-frontend-field  " value="Fundamental" name="Curso"
+										id="Curso_Fundamental" required="required" data-label="Curso"> <label
+										for="Curso_Fundamental" class="radio">Fundamental</label></li>
+								<li class="ur-radio-list"><input data-rules="" data-id="Curso" type="radio"
+										class="input-radio ur-frontend-field  " value="Intermediario" name="Curso"
+										id="Curso_Intermediario" required="required" data-label="Curso"> <label
+										for="Curso_Intermediario" class="radio">Intermediario</label></li>
+								<li class="ur-radio-list"><input data-rules="" data-id="Curso" type="radio"
+										class="input-radio ur-frontend-field  " value="Avançado" name="Curso"
+										id="Curso_Avançado" required="required" data-label="Curso"> <label
+										for="Curso_Avançado" class="radio">Avançado</label></li>
+							</ul>
+						</div>
+					</div>
+					<button type="submit" id="insc-btn" class="btn button ur-submit-button insc-btn w-100">
+						<span></span>
+						Solicitar inscrição </button>
+				</form>
+				<div class="mb-3 aviso-insc" style="display: none;">
+						<div class="loading">Carregando</div>
+
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>

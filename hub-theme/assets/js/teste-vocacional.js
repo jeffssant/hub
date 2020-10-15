@@ -4,20 +4,20 @@ function counterwpProQuiz_buttonPages(e) {
     var o = $("p#pagecounter"),
         a = $(".wpProQuiz_question #load-bar-quiz");
     if (22 >= e) {
-        var e = Number($("#page-cur").text()) + 1,
+        var e = Number($("#page-cur").val()) + 1,
             t = Math.round(100 * e / 22);
         a.animate({
             width: t + "%"
-        }, 500), o.find("#page-cur").text(e), $("input[value='Finish quiz'].wpProQuiz_button.wpProQuiz_QuestionButton").attr("value", "Finalizar")
-    } else o.remove(), $("#pagecounter, #wpProQuiz_1 .wpProQuiz_quiz, h4.wpProQuiz_header").remove(), $("#conteudo-second,#vantagens").empty(), setTimeout(function () {
+        }, 10),  $("input[value='Finish quiz'].wpProQuiz_button.wpProQuiz_QuestionButton").attr("value", "Finalizar")
+        $("#page-cur").val(e);
+    } else $("#pagecounter, #wpProQuiz_1 .wpProQuiz_quiz, h4.wpProQuiz_header").remove(), $("#conteudo-second,#vantagens").empty(), setTimeout(function () {
         $("html,body").stop();
         var e = $(".lista-cursos-result:visible");
         $("#conteudo-second").append(e);
-        var o = $("#quiz-container");
-        $("html,body").stop().animate({
-            scrollTop: o.offset().top - 100
-        }, 50)
+        $("#page-cur").val('1');            
     }, 50)
+
+    
 }
 
 function radioButton() {
@@ -31,8 +31,8 @@ function radioButton() {
 
 function nextPage() {
     counterwpProQuiz_buttonPages(Number($("#page-cur").text()) + 1);
-    $(".radioBoxCheck").is(":visible")
-        && counterwpProQuiz_buttonPages(Number($("#page-cur").text()) + 1), $("html,body").stop();
+    $(".radioBoxCheck").is(":visible") &&
+        counterwpProQuiz_buttonPages(Number($("#page-cur").text()) + 1), $("html,body").stop();
 }
 
 (function ($) {

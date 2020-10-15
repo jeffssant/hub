@@ -1,8 +1,12 @@
 #quiz-container {
-    padding: 100px 0px 30px 0px;
-    background: #3e9eb1;
+    padding: 60px 0px 30px 0px;
+    background: #000000d9;
+    min-height: 100vh;
 }
 
+.wpProQuiz_question_page{
+    color: white;
+}
 #wpProQuiz_2 {
     height: auto;
     overflow-y: auto;
@@ -22,7 +26,7 @@
     left: 20%;
     bottom: 5%;
     height: 1px;
-    border-top: solid #3e9eb1 3px;
+    border-top: solid #f3b300 3px;
 }
 
 .wpProQuiz_question {
@@ -83,14 +87,14 @@ input[name=next].wpProQuiz_button:hover {
     line-height: 1.5;
     border-radius: .25rem !important;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    background-color: #184478 !important;
+    background-color: #f3b300 !important;
 }
 
 .radioBoxCheck:before,
 .radioBoxUncheck:before {
     font-family: FontAwesome;
     font-size: 17px;
-    color: #feca0c;
+    color: #f3b300;
     position: relative
 }
 
@@ -139,7 +143,7 @@ p#pagecounter {
 }
 
 #result-section span {
-    background: linear-gradient(to right, #0576d7, #354fc7);
+    background: linear-gradient(to right, #f6b800, #cd4116);
     padding: 10px;
     border-radius: 5px;
     width: 50%;
@@ -150,7 +154,7 @@ p#pagecounter {
 }
 
 p#conheca-cursos {
-    color: #003366;
+    color: #151515;
     position: relative
 }
 
@@ -197,10 +201,11 @@ p#conheca-cursos i {
     text-transform: uppercase
 }
 
-#cursos-lista .column-cursos ul li:before {
+#cursos-lista .column-cursos ul li:before, .curso-result:before {
     content: "\f046";
     font-family: FontAwesome;
-    color: #0a79d8
+    color: #151515;
+    padding-right: 5px;
 }
 
 #cursos-lista .container:after,

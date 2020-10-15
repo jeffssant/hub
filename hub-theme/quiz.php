@@ -2,16 +2,20 @@
 /**
  * Template Name: Quiz
  */
+if( !is_user_logged_in() ) {
+    echo '<script>window.location = "'.home_url( ).'"</script>';
+        exit();   
+} 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <title>Hub educacional</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Hub Vocacional</title>
+    
+
 
     <!-- Favicons 
     <link href="img/favicon.png" rel="icon">
@@ -29,32 +33,16 @@
     <!--==========================
   Header
   ============================-->
-    <header id="header" class="fixed-top">
-        <div class="container">
-
-            <div class="logo float-left">
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-                <a href="#intro" class="scrollto"><img src="<?=ASSETS?>img/logo.png" alt="" class="img-fluid"></a>
-            </div>
-
-            <nav class="main-nav float-right d-none d-lg-block">
-                <ul>
-                    <li class="active"><a href="http://hubvocacional.com.br/">Home</a></li>
-                    
-                </ul>
-            </nav><!-- .main-nav -->
-
-        </div>
-    </header><!-- #header -->
+ <?php get_header(); ?>
 
 
 
 <section id="quiz-container">
     <div class="container">
-        <p id="pagecounter" class="text-secondary">Questão 
-            <span id="page-cur">1</span> de <span id="page-last">22</span></p>
+     <input type="hidden" id="page-cur" value="1">
+        
         <?php
+        
             while(have_posts()) {
                 the_post();
                 the_content();

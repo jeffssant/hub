@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title><?php wp_title(''); ?></title>
+	<title>Hub Vocacional</title>
     <?php wp_head(); ?>
 </head>
 
@@ -16,18 +16,27 @@
   <header id="header" class="fixed-top ">
 		<div class="container d-flex align-items-center justify-content-between">
 
-			<h1 class="logo"><a href="index.html"><img src="wp-content/themes/hub-theme/assets/img/Logotipo Hub Vocacional positivo.png" alt=""
+			<h1 class="logo"><a href="<?=site_url( )?>"><img src="<?=ASSETS?>img/Logotipo Hub Vocacional positivo.png" alt=""
 						srcset=""></a></h1>
 			<!-- Uncomment below if you prefer to use an image logo -->
 			<!-- <a href="index.html" class="logo"><img src="wp-content/themes/hub-theme/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
 			<nav class="nav-menu d-none d-lg-block">
 				<ul>
-					<li class="active"><a href="index.html">Home</a></li>
+					<?php if(is_home(  )){ ?>
+					<li class="active"><a href="<?=site_url( )?>">Home</a></li>
 					<li><a href="#services">Emprego dos Sonhos</a></li>
 					<li><a href="#cta">Teste Vocacional</a></li>
 					<li><a href="#features">Nossos Cursos</a></li>
 					<li><a href="#contact">Contato</a></li>
+					<?php } else{?>
+
+					<li class="active"><a href="<?=site_url( )?>">Home</a></li>
+					<li><a href="<?=site_url( )?>/#services">Emprego dos Sonhos</a></li>
+					<li><a href="<?=site_url( )?>/#cta">Teste Vocacional</a></li>
+					<li><a href="<?=site_url( )?>/#features">Nossos Cursos</a></li>
+					<li><a href="<?=site_url( )?>/#contact">Contato</a></li>
+					<?php } ?>
 				</ul>
 			</nav><!-- .nav-menu -->
 
